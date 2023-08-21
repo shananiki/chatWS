@@ -1,0 +1,141 @@
+
+@font-face {
+  font-family: 'basiic';
+  src: url('basiic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TFTWindows';
+  src: url('TFTWindows.ttf') format('truetype');
+}
+ 
+.my-class {
+  font-family: 'basiic', sans-serif;
+}
+ 
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 10;
+	background-color: #000000d3;
+}
+ 
+.container {
+	font-family: "basiic";
+	width: 350px;
+	height: 350px;
+	background-color: lightgray;
+	border: 2px solid #383838;
+	border-radius: 4px;
+	color: white;
+	padding: 10px 15px;
+	margin: 5px;
+}
+
+.blur-box {
+	font-family: "TFTWindows";
+	width: 350px;
+	height: 350px;
+	background-color: #000000d3;
+	border: 2px solid #383838;
+	border-radius: 4px;
+	color: white;
+	padding: 10px 15px;
+	margin: 2px;
+}
+ 
+.box {
+	font-family: "TFTWindows";
+	width: 500px;
+	height: 400px;
+	background-color: #000000d3;
+	border: 2px solid #383838;
+	border-radius: 4px;
+	color: white;
+	padding: 10px 15px;
+	margin: 2px;
+}
+ 
+.greentext {
+	margin-left: 2px;
+	margin-top: 2px;
+	font-family: "TFTWindows";
+	color: green;
+ 
+}
+
+.form-group {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.form-group label {
+	width: 120px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+	flex: 1;
+}
+
+.comment-button {
+		background:linear-gradient(to bottom, #ff66f5 5%, #d600bd 100%);
+		background-color:#ff66f5;
+		border-radius:6px;
+		border:1px solid #960091;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:17px;
+		padding:10px 35px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #a12a99;
+	
+}
+
+.message-input {	
+
+	bottom: 5px;
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #383838;
+	font-family: MS Gothic,monospace;
+	padding: 3px;
+	width: 400px;
+}
+
+#button-send{
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #383838;
+	font-family: MS Gothic,monospace;
+	padding: 3px 27px;
+	cursor: pointer;
+	width: 20px;
+	position: center;
+}
+
+.chat-message{
+	image-rendering: pixelated;
+	font-family: russiangothic,ms ui gothic,nec_apc3,Tahoma;
+	margin-top: 2px;
+	display: flex; /* Use flexbox to align items horizontally */
+	justify-content: space-between; /* Space between items pushes date to the right */
+}
+
+.chat-input{
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 5px;
+}
+
+  
+
+.chat-msg {
+	flex-grow: 1; /* Allow name and message to grow to fill available space */
+}
