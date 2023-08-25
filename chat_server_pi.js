@@ -1,6 +1,13 @@
 import WebSocket, { WebSocketServer } from "ws";
+import * as http from 'http';
 
 console.log("Starting WebSocket Server on port 3000.");
+
+const server = http.createServer((req, res) => {
+  // Your HTTP server code here (if needed)
+});
+
+
 const wss = new WebSocketServer({ 
   port: 3000,
   maxPayload: 1024 * 1024
@@ -44,7 +51,7 @@ function generateRandomString(length) {
 
 
 let ids = 0;
-wss.on("connection", function connection(ws) {
+wss.on("connection", function connection(ws, req) {
 
   ws.id = ids++;
   var newUserName = generateRandomString(6);
@@ -64,6 +71,7 @@ wss.on("connection", function connection(ws) {
     var json = JSON.parse(bufferMessage);
     json.from_userid = ws.id;
     json.from_username = getUserNameByID(ws.id);
+    json.from_ip = req.connection.remoteAddress;
     console.log(json);
 
     if(json.data.includes("/username")){
